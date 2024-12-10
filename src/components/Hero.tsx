@@ -46,9 +46,9 @@ export const Hero = () => {
     switch (activeTab) {
       case 'home':
         return (
-          <div className="p-2 text-center">
-            <h3 className="text-sm font-semibold mb-1 text-gray-900">John Doe</h3>
-            <p className="text-xs text-gray-700">Full Stack Developer</p>
+          <div className="p-2 text-center flex flex-col items-center justify-center">
+            <h3 className="text-sm font-semibold mb-1 text-gray-900">Sajith Lal</h3>
+            <p className="text-xs text-gray-700">Mobile App Developer</p>
           </div>
         );
       case 'projects':
@@ -109,13 +109,13 @@ export const Hero = () => {
     <section
       className={`relative min-h-screen flex flex-col md:flex-row justify-center items-center text-center md:text-left px-6 md:px-18 lg:px-24 py-20 md:py-24 gap-16 overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        transform: `translateY(${scrollY * 0.1}px)`,
+        transform: `translateY(${scrollY * 0.2}px)`,
       }}
     >
       <div
         className="flex-1 relative z-10"
         style={{
-          transform: `translateY(${-scrollY * 0.2}px)`,
+          transform: `translateY(${-scrollY * 0.4}px)`,
           opacity: Math.max(1 - scrollY * 0.002, 0),
         }}
       >
@@ -132,7 +132,7 @@ export const Hero = () => {
           className="flex gap-4 animate-fade-up justify-center md:justify-start"
           style={{
             animationDelay: "0.4s",
-            transform: `translateY(${-scrollY * 0.15}px)`,
+            transform: `translateY(${-scrollY * 0.3}px)`,
           }}
         >
           <div className="relative group">
@@ -165,7 +165,7 @@ export const Hero = () => {
         className="flex-1 animate-fade-up relative z-10 transition-all duration-700"
         style={{
           animationDelay: "0.6s",
-          transform: `translateY(${scrollY * 0.3}px) scale(${1 - scrollY * 0.0003})`,
+          transform: `translateY(${scrollY * 0.5}px) scale(${1 - scrollY * 0.0004})`,
           opacity: Math.max(1 - scrollY * 0.0015, 0),
         }}
       >
@@ -174,7 +174,7 @@ export const Hero = () => {
 
           <div className="relative h-full w-full bg-gray-50 overflow-hidden">
             <div className="h-full flex flex-col ">
-              <div className="mt-6"> {getMobileContent()}</div>
+              <div className="mt-6 h-full"> {getMobileContent()}</div>
               <div className="mt-auto bg-white shadow-xl mb-3 rounded-3xl py-2 mx-3">
                 <div className="flex justify-around py-1 px-1">
                   {[
